@@ -15,6 +15,8 @@ namespace RentalPoint
         public MainForm()
         {
             InitializeComponent();
+            
+            
         }
 
         private void SignInBtn_Click(object sender, EventArgs e)
@@ -38,6 +40,24 @@ namespace RentalPoint
             }
 
             
+        }
+
+        private void ViewPasscheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ViewPasscheckBox.Checked)
+            {
+                PasswordTextBox.PasswordChar = (char)0;
+            }
+            else
+            {
+                PasswordTextBox.PasswordChar = '*';
+            }
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+            userService.GeneratedCaptcha();
         }
     }
 }
