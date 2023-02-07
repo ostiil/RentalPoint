@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPoint", "RentalPoint.csproj", "{5D1E69AE-3344-4112-AA69-E7DD4BC6AFF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D1E69AE-3344-4112-AA69-E7DD4BC6AFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1E69AE-3344-4112-AA69-E7DD4BC6AFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1E69AE-3344-4112-AA69-E7DD4BC6AFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1E69AE-3344-4112-AA69-E7DD4BC6AFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF6A6C8A-CA85-486E-91C1-27B18574C705}
+	EndGlobalSection
+EndGlobal
