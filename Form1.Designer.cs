@@ -34,7 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ViewPasscheckBox = new System.Windows.Forms.CheckBox();
+            this.CapchaTb = new System.Windows.Forms.TextBox();
             this.CaptchapictureBox = new System.Windows.Forms.PictureBox();
+            this.CapchaBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CaptchapictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +97,14 @@
             this.ViewPasscheckBox.UseVisualStyleBackColor = true;
             this.ViewPasscheckBox.CheckedChanged += new System.EventHandler(this.ViewPasscheckBox_CheckedChanged);
             // 
+            // CapchaTb
+            // 
+            this.CapchaTb.Location = new System.Drawing.Point(172, 128);
+            this.CapchaTb.Name = "CapchaTb";
+            this.CapchaTb.Size = new System.Drawing.Size(100, 20);
+            this.CapchaTb.TabIndex = 7;
+            this.CapchaTb.Visible = false;
+            // 
             // CaptchapictureBox
             // 
             this.CaptchapictureBox.Location = new System.Drawing.Point(41, 108);
@@ -103,11 +113,23 @@
             this.CaptchapictureBox.TabIndex = 6;
             this.CaptchapictureBox.TabStop = false;
             // 
+            // CapchaBtn
+            // 
+            this.CapchaBtn.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CapchaBtn.Location = new System.Drawing.Point(41, 164);
+            this.CapchaBtn.Name = "CapchaBtn";
+            this.CapchaBtn.Size = new System.Drawing.Size(44, 28);
+            this.CapchaBtn.TabIndex = 8;
+            this.CapchaBtn.UseVisualStyleBackColor = true;
+            this.CapchaBtn.Click += new System.EventHandler(this.CapchaBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 227);
+            this.Controls.Add(this.CapchaBtn);
+            this.Controls.Add(this.CapchaTb);
             this.Controls.Add(this.CaptchapictureBox);
             this.Controls.Add(this.ViewPasscheckBox);
             this.Controls.Add(this.label2);
@@ -118,7 +140,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.Text = "Авторизация";
-            this.Activated += new System.EventHandler(this.MainForm_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.CaptchapictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,6 +155,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox ViewPasscheckBox;
         public System.Windows.Forms.PictureBox CaptchapictureBox;
+        public System.Windows.Forms.TextBox CapchaTb;
+        private System.Windows.Forms.Button CapchaBtn;
     }
 }
 

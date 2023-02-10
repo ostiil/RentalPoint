@@ -51,5 +51,22 @@ namespace RentalPoint
             }*/
             
         }
+
+        private void AddClientBtn_Click(object sender, EventArgs e)
+        {
+            AddClientForm addClientForm = new AddClientForm();
+            addClientForm.ShowDialog();
+        }
+
+        private void AcountForm_Activated(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = RentalPointEntities.GetContext().client.ToList();
+        }
+
+        private void AddClientForOrder_Click(object sender, EventArgs e)
+        {
+            AddClientForm addClientForm = new AddClientForm();
+            addClientForm.ShowDialog();
+        }
     }
 }

@@ -31,8 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.labelRole = new System.Windows.Forms.Label();
+            this.labelUser = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.OrderBtn = new System.Windows.Forms.Button();
+            this.TimeRentTb = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rentalPointDataSet = new RentalPoint.RentalPointDataSet();
+            this.dateCloseTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateOpenTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.StatusCb = new System.Windows.Forms.ComboBox();
+            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClientCb = new System.Windows.Forms.ComboBox();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,36 +54,30 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CodeOrderTb = new System.Windows.Forms.TextBox();
-            this.rentalPointDataSet = new RentalPoint.RentalPointDataSet();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.AddClientBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clientTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.clientTableAdapter();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.orderTableAdapter();
-            this.StatusCb = new System.Windows.Forms.ComboBox();
-            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.statusTableAdapter();
-            this.dateOpenTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateCloseTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.TimeRentTb = new System.Windows.Forms.TextBox();
-            this.OrderBtn = new System.Windows.Forms.Button();
-            this.labelUser = new System.Windows.Forms.Label();
-            this.labelRole = new System.Windows.Forms.Label();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.AddClientForOrder = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rentalPointDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalPointDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -90,8 +97,39 @@
             this.tabPage1.Text = "Пользователь";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::RentalPoint.Properties.Resources.user;
+            this.pictureBoxUser.Location = new System.Drawing.Point(22, 36);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(135, 97);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUser.TabIndex = 2;
+            this.pictureBoxUser.TabStop = false;
+            // 
+            // labelRole
+            // 
+            this.labelRole.AutoSize = true;
+            this.labelRole.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRole.Location = new System.Drawing.Point(196, 93);
+            this.labelRole.Name = "labelRole";
+            this.labelRole.Size = new System.Drawing.Size(58, 18);
+            this.labelRole.TabIndex = 1;
+            this.labelRole.Text = "label8";
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUser.Location = new System.Drawing.Point(196, 45);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(58, 18);
+            this.labelUser.TabIndex = 0;
+            this.labelUser.Text = "label8";
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.AddClientForOrder);
             this.tabPage2.Controls.Add(this.OrderBtn);
             this.tabPage2.Controls.Add(this.TimeRentTb);
             this.tabPage2.Controls.Add(this.maskedTextBox1);
@@ -115,6 +153,78 @@
             this.tabPage2.Text = "Сформировать заказ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // OrderBtn
+            // 
+            this.OrderBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OrderBtn.Location = new System.Drawing.Point(325, 230);
+            this.OrderBtn.Name = "OrderBtn";
+            this.OrderBtn.Size = new System.Drawing.Size(177, 32);
+            this.OrderBtn.TabIndex = 8;
+            this.OrderBtn.Text = "Сформировать заказ";
+            this.OrderBtn.UseVisualStyleBackColor = true;
+            this.OrderBtn.Click += new System.EventHandler(this.OrderBtn_Click);
+            // 
+            // TimeRentTb
+            // 
+            this.TimeRentTb.Location = new System.Drawing.Point(222, 199);
+            this.TimeRentTb.Name = "TimeRentTb";
+            this.TimeRentTb.ReadOnly = true;
+            this.TimeRentTb.Size = new System.Drawing.Size(100, 20);
+            this.TimeRentTb.TabIndex = 7;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "time_order", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "t"));
+            this.maskedTextBox1.Location = new System.Drawing.Point(222, 78);
+            this.maskedTextBox1.Mask = "00:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 3;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataMember = "order";
+            this.orderBindingSource.DataSource = this.rentalPointDataSet;
+            // 
+            // rentalPointDataSet
+            // 
+            this.rentalPointDataSet.DataSetName = "RentalPointDataSet";
+            this.rentalPointDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dateCloseTimePicker
+            // 
+            this.dateCloseTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "date_order_close", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
+            this.dateCloseTimePicker.Location = new System.Drawing.Point(222, 168);
+            this.dateCloseTimePicker.Name = "dateCloseTimePicker";
+            this.dateCloseTimePicker.Size = new System.Drawing.Size(142, 20);
+            this.dateCloseTimePicker.TabIndex = 6;
+            // 
+            // dateOpenTimePicker
+            // 
+            this.dateOpenTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "date_order_open", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
+            this.dateOpenTimePicker.Location = new System.Drawing.Point(222, 47);
+            this.dateOpenTimePicker.Name = "dateOpenTimePicker";
+            this.dateOpenTimePicker.Size = new System.Drawing.Size(131, 20);
+            this.dateOpenTimePicker.TabIndex = 2;
+            // 
+            // StatusCb
+            // 
+            this.StatusCb.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orderBindingSource, "status_id", true));
+            this.StatusCb.DataSource = this.statusBindingSource;
+            this.StatusCb.DisplayMember = "name_status";
+            this.StatusCb.FormattingEnabled = true;
+            this.StatusCb.Location = new System.Drawing.Point(222, 135);
+            this.StatusCb.Name = "StatusCb";
+            this.StatusCb.Size = new System.Drawing.Size(121, 21);
+            this.StatusCb.TabIndex = 5;
+            this.StatusCb.ValueMember = "id_status";
+            // 
+            // statusBindingSource
+            // 
+            this.statusBindingSource.DataMember = "status";
+            this.statusBindingSource.DataSource = this.rentalPointDataSet;
+            // 
             // ClientCb
             // 
             this.ClientCb.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orderBindingSource, "code_client", true));
@@ -126,6 +236,11 @@
             this.ClientCb.Size = new System.Drawing.Size(121, 21);
             this.ClientCb.TabIndex = 4;
             this.ClientCb.ValueMember = "code_client";
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataMember = "client";
+            this.clientBindingSource.DataSource = this.rentalPointDataSet;
             // 
             // label7
             // 
@@ -204,124 +319,57 @@
             this.CodeOrderTb.Size = new System.Drawing.Size(100, 20);
             this.CodeOrderTb.TabIndex = 0;
             // 
-            // rentalPointDataSet
+            // tabPage3
             // 
-            this.rentalPointDataSet.DataSetName = "RentalPointDataSet";
-            this.rentalPointDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tabPage3.Controls.Add(this.AddClientBtn);
+            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(508, 268);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Просмотр клиентов";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // clientBindingSource
+            // AddClientBtn
             // 
-            this.clientBindingSource.DataMember = "client";
-            this.clientBindingSource.DataSource = this.rentalPointDataSet;
+            this.AddClientBtn.Location = new System.Drawing.Point(45, 227);
+            this.AddClientBtn.Name = "AddClientBtn";
+            this.AddClientBtn.Size = new System.Drawing.Size(138, 23);
+            this.AddClientBtn.TabIndex = 1;
+            this.AddClientBtn.Text = "Добавить клиента";
+            this.AddClientBtn.UseVisualStyleBackColor = true;
+            this.AddClientBtn.Click += new System.EventHandler(this.AddClientBtn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(501, 207);
+            this.dataGridView1.TabIndex = 0;
             // 
             // clientTableAdapter
             // 
             this.clientTableAdapter.ClearBeforeFill = true;
             // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataMember = "order";
-            this.orderBindingSource.DataSource = this.rentalPointDataSet;
-            // 
             // orderTableAdapter
             // 
             this.orderTableAdapter.ClearBeforeFill = true;
-            // 
-            // StatusCb
-            // 
-            this.StatusCb.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.orderBindingSource, "status_id", true));
-            this.StatusCb.DataSource = this.statusBindingSource;
-            this.StatusCb.DisplayMember = "name_status";
-            this.StatusCb.FormattingEnabled = true;
-            this.StatusCb.Location = new System.Drawing.Point(222, 135);
-            this.StatusCb.Name = "StatusCb";
-            this.StatusCb.Size = new System.Drawing.Size(121, 21);
-            this.StatusCb.TabIndex = 5;
-            this.StatusCb.ValueMember = "id_status";
-            // 
-            // statusBindingSource
-            // 
-            this.statusBindingSource.DataMember = "status";
-            this.statusBindingSource.DataSource = this.rentalPointDataSet;
             // 
             // statusTableAdapter
             // 
             this.statusTableAdapter.ClearBeforeFill = true;
             // 
-            // dateOpenTimePicker
+            // AddClientForOrder
             // 
-            this.dateOpenTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "date_order_open", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
-            this.dateOpenTimePicker.Location = new System.Drawing.Point(222, 47);
-            this.dateOpenTimePicker.Name = "dateOpenTimePicker";
-            this.dateOpenTimePicker.Size = new System.Drawing.Size(131, 20);
-            this.dateOpenTimePicker.TabIndex = 2;
-            // 
-            // dateCloseTimePicker
-            // 
-            this.dateCloseTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "date_order_close", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
-            this.dateCloseTimePicker.Location = new System.Drawing.Point(222, 168);
-            this.dateCloseTimePicker.Name = "dateCloseTimePicker";
-            this.dateCloseTimePicker.Size = new System.Drawing.Size(142, 20);
-            this.dateCloseTimePicker.TabIndex = 6;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "time_order", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "t"));
-            this.maskedTextBox1.Location = new System.Drawing.Point(222, 78);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // TimeRentTb
-            // 
-            this.TimeRentTb.Location = new System.Drawing.Point(222, 199);
-            this.TimeRentTb.Name = "TimeRentTb";
-            this.TimeRentTb.ReadOnly = true;
-            this.TimeRentTb.Size = new System.Drawing.Size(100, 20);
-            this.TimeRentTb.TabIndex = 7;
-            // 
-            // OrderBtn
-            // 
-            this.OrderBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderBtn.Location = new System.Drawing.Point(325, 230);
-            this.OrderBtn.Name = "OrderBtn";
-            this.OrderBtn.Size = new System.Drawing.Size(177, 32);
-            this.OrderBtn.TabIndex = 8;
-            this.OrderBtn.Text = "Сформировать заказ";
-            this.OrderBtn.UseVisualStyleBackColor = true;
-            this.OrderBtn.Click += new System.EventHandler(this.OrderBtn_Click);
-            // 
-            // labelUser
-            // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUser.Location = new System.Drawing.Point(196, 45);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(58, 18);
-            this.labelUser.TabIndex = 0;
-            this.labelUser.Text = "label8";
-            // 
-            // labelRole
-            // 
-            this.labelRole.AutoSize = true;
-            this.labelRole.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRole.Location = new System.Drawing.Point(196, 93);
-            this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(58, 18);
-            this.labelRole.TabIndex = 1;
-            this.labelRole.Text = "label8";
-            // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::RentalPoint.Properties.Resources.user;
-            this.pictureBoxUser.Location = new System.Drawing.Point(22, 36);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(135, 97);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxUser.TabIndex = 2;
-            this.pictureBoxUser.TabStop = false;
+            this.AddClientForOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddClientForOrder.Location = new System.Drawing.Point(375, 109);
+            this.AddClientForOrder.Name = "AddClientForOrder";
+            this.AddClientForOrder.Size = new System.Drawing.Size(38, 23);
+            this.AddClientForOrder.TabIndex = 9;
+            this.AddClientForOrder.Text = "+";
+            this.AddClientForOrder.UseVisualStyleBackColor = true;
+            this.AddClientForOrder.Click += new System.EventHandler(this.AddClientForOrder_Click);
             // 
             // AcountForm
             // 
@@ -331,17 +379,20 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "AcountForm";
             this.Text = "Аккаунт";
+            this.Activated += new System.EventHandler(this.AcountForm_Activated);
             this.Load += new System.EventHandler(this.AcountForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rentalPointDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalPointDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +427,9 @@
         public System.Windows.Forms.Label labelRole;
         public System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.PictureBox pictureBoxUser;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button AddClientBtn;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button AddClientForOrder;
     }
 }
