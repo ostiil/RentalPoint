@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageUser = new System.Windows.Forms.TabPage();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.labelRole = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageOrder = new System.Windows.Forms.TabPage();
             this.OrderBtn = new System.Windows.Forms.Button();
             this.TimeRentTb = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -54,48 +54,60 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CodeOrderTb = new System.Windows.Forms.TextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPageViewClients = new System.Windows.Forms.TabPage();
             this.AddClientBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clientTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.clientTableAdapter();
             this.orderTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.orderTableAdapter();
             this.statusTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.statusTableAdapter();
             this.AddClientForOrder = new System.Windows.Forms.Button();
+            this.tabPageReports = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roleTableAdapter = new RentalPoint.RentalPointDataSetTableAdapters.roleTableAdapter();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.CloseApplication = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabPageOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentalPointDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tabPageViewClients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPageReports.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPageUser);
+            this.tabControl1.Controls.Add(this.tabPageOrder);
+            this.tabControl1.Controls.Add(this.tabPageViewClients);
+            this.tabControl1.Controls.Add(this.tabPageReports);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(516, 294);
+            this.tabControl1.Size = new System.Drawing.Size(516, 275);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
-            // tabPage1
+            // tabPageUser
             // 
-            this.tabPage1.Controls.Add(this.pictureBoxUser);
-            this.tabPage1.Controls.Add(this.labelRole);
-            this.tabPage1.Controls.Add(this.labelUser);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(508, 268);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Пользователь";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageUser.Controls.Add(this.pictureBoxUser);
+            this.tabPageUser.Controls.Add(this.labelRole);
+            this.tabPageUser.Controls.Add(this.labelUser);
+            this.tabPageUser.Location = new System.Drawing.Point(4, 22);
+            this.tabPageUser.Name = "tabPageUser";
+            this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUser.Size = new System.Drawing.Size(508, 249);
+            this.tabPageUser.TabIndex = 0;
+            this.tabPageUser.Text = "Пользователь";
+            this.tabPageUser.UseVisualStyleBackColor = true;
             // 
             // pictureBoxUser
             // 
@@ -127,36 +139,36 @@
             this.labelUser.TabIndex = 0;
             this.labelUser.Text = "label8";
             // 
-            // tabPage2
+            // tabPageOrder
             // 
-            this.tabPage2.Controls.Add(this.AddClientForOrder);
-            this.tabPage2.Controls.Add(this.OrderBtn);
-            this.tabPage2.Controls.Add(this.TimeRentTb);
-            this.tabPage2.Controls.Add(this.maskedTextBox1);
-            this.tabPage2.Controls.Add(this.dateCloseTimePicker);
-            this.tabPage2.Controls.Add(this.dateOpenTimePicker);
-            this.tabPage2.Controls.Add(this.StatusCb);
-            this.tabPage2.Controls.Add(this.ClientCb);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.CodeOrderTb);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(508, 268);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Сформировать заказ";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageOrder.Controls.Add(this.AddClientForOrder);
+            this.tabPageOrder.Controls.Add(this.OrderBtn);
+            this.tabPageOrder.Controls.Add(this.TimeRentTb);
+            this.tabPageOrder.Controls.Add(this.maskedTextBox1);
+            this.tabPageOrder.Controls.Add(this.dateCloseTimePicker);
+            this.tabPageOrder.Controls.Add(this.dateOpenTimePicker);
+            this.tabPageOrder.Controls.Add(this.StatusCb);
+            this.tabPageOrder.Controls.Add(this.ClientCb);
+            this.tabPageOrder.Controls.Add(this.label7);
+            this.tabPageOrder.Controls.Add(this.label6);
+            this.tabPageOrder.Controls.Add(this.label5);
+            this.tabPageOrder.Controls.Add(this.label4);
+            this.tabPageOrder.Controls.Add(this.label3);
+            this.tabPageOrder.Controls.Add(this.label2);
+            this.tabPageOrder.Controls.Add(this.label1);
+            this.tabPageOrder.Controls.Add(this.CodeOrderTb);
+            this.tabPageOrder.Location = new System.Drawing.Point(4, 22);
+            this.tabPageOrder.Name = "tabPageOrder";
+            this.tabPageOrder.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageOrder.Size = new System.Drawing.Size(508, 249);
+            this.tabPageOrder.TabIndex = 1;
+            this.tabPageOrder.Text = "Сформировать заказ";
+            this.tabPageOrder.UseVisualStyleBackColor = true;
             // 
             // OrderBtn
             // 
             this.OrderBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderBtn.Location = new System.Drawing.Point(325, 230);
+            this.OrderBtn.Location = new System.Drawing.Point(325, 211);
             this.OrderBtn.Name = "OrderBtn";
             this.OrderBtn.Size = new System.Drawing.Size(177, 32);
             this.OrderBtn.TabIndex = 8;
@@ -319,20 +331,20 @@
             this.CodeOrderTb.Size = new System.Drawing.Size(100, 20);
             this.CodeOrderTb.TabIndex = 0;
             // 
-            // tabPage3
+            // tabPageViewClients
             // 
-            this.tabPage3.Controls.Add(this.AddClientBtn);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(508, 268);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Просмотр клиентов";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageViewClients.Controls.Add(this.AddClientBtn);
+            this.tabPageViewClients.Controls.Add(this.dataGridView1);
+            this.tabPageViewClients.Location = new System.Drawing.Point(4, 22);
+            this.tabPageViewClients.Name = "tabPageViewClients";
+            this.tabPageViewClients.Size = new System.Drawing.Size(508, 249);
+            this.tabPageViewClients.TabIndex = 2;
+            this.tabPageViewClients.Text = "Просмотр клиентов";
+            this.tabPageViewClients.UseVisualStyleBackColor = true;
             // 
             // AddClientBtn
             // 
-            this.AddClientBtn.Location = new System.Drawing.Point(45, 227);
+            this.AddClientBtn.Location = new System.Drawing.Point(46, 216);
             this.AddClientBtn.Name = "AddClientBtn";
             this.AddClientBtn.Size = new System.Drawing.Size(138, 23);
             this.AddClientBtn.TabIndex = 1;
@@ -371,28 +383,82 @@
             this.AddClientForOrder.UseVisualStyleBackColor = true;
             this.AddClientForOrder.Click += new System.EventHandler(this.AddClientForOrder_Click);
             // 
+            // tabPageReports
+            // 
+            this.tabPageReports.Controls.Add(this.dataGridView2);
+            this.tabPageReports.Location = new System.Drawing.Point(4, 22);
+            this.tabPageReports.Name = "tabPageReports";
+            this.tabPageReports.Size = new System.Drawing.Size(508, 249);
+            this.tabPageReports.TabIndex = 3;
+            this.tabPageReports.Text = "Сформировать отчеты";
+            this.tabPageReports.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(123, 52);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataMember = "role";
+            this.roleBindingSource.DataSource = this.rentalPointDataSet;
+            // 
+            // roleTableAdapter
+            // 
+            this.roleTableAdapter.ClearBeforeFill = true;
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Location = new System.Drawing.Point(136, 289);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(183, 23);
+            this.ExitBtn.TabIndex = 1;
+            this.ExitBtn.Text = "Вернуться к главной форме";
+            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // CloseApplication
+            // 
+            this.CloseApplication.Location = new System.Drawing.Point(345, 289);
+            this.CloseApplication.Name = "CloseApplication";
+            this.CloseApplication.Size = new System.Drawing.Size(183, 23);
+            this.CloseApplication.TabIndex = 2;
+            this.CloseApplication.Text = "Закрыть программу";
+            this.CloseApplication.UseVisualStyleBackColor = true;
+            this.CloseApplication.Click += new System.EventHandler(this.CloseApplication_Click);
+            // 
             // AcountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 313);
+            this.ControlBox = false;
+            this.Controls.Add(this.CloseApplication);
+            this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AcountForm";
             this.Text = "Аккаунт";
             this.Activated += new System.EventHandler(this.AcountForm_Activated);
             this.Load += new System.EventHandler(this.AcountForm_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageUser.ResumeLayout(false);
+            this.tabPageUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPageOrder.ResumeLayout(false);
+            this.tabPageOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentalPointDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            this.tabPage3.ResumeLayout(false);
+            this.tabPageViewClients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPageReports.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,8 +466,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageUser;
+        private System.Windows.Forms.TabPage tabPageOrder;
         private System.Windows.Forms.ComboBox ClientCb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -427,9 +493,15 @@
         public System.Windows.Forms.Label labelRole;
         public System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.PictureBox pictureBoxUser;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPageViewClients;
         private System.Windows.Forms.Button AddClientBtn;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddClientForOrder;
+        private System.Windows.Forms.TabPage tabPageReports;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource roleBindingSource;
+        private RentalPointDataSetTableAdapters.roleTableAdapter roleTableAdapter;
+        private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Button CloseApplication;
     }
 }

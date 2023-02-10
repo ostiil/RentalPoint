@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.AddBtn = new System.Windows.Forms.Button();
+            this.ReturnBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FioTb
@@ -129,7 +130,7 @@
             // AddBtn
             // 
             this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddBtn.Location = new System.Drawing.Point(96, 250);
+            this.AddBtn.Location = new System.Drawing.Point(30, 252);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(99, 30);
             this.AddBtn.TabIndex = 10;
@@ -137,11 +138,24 @@
             this.AddBtn.UseVisualStyleBackColor = true;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
+            // ReturnBtn
+            // 
+            this.ReturnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReturnBtn.Location = new System.Drawing.Point(170, 252);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(99, 30);
+            this.ReturnBtn.TabIndex = 11;
+            this.ReturnBtn.Text = "Вернуться";
+            this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            // 
             // AddClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 294);
+            this.ControlBox = false;
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -173,5 +187,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button ReturnBtn;
     }
 }

@@ -20,6 +20,8 @@ namespace RentalPoint
         private order order = new order();
         private void AcountForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rentalPointDataSet.role". При необходимости она может быть перемещена или удалена.
+            this.roleTableAdapter.Fill(this.rentalPointDataSet.role);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "rentalPointDataSet.status". При необходимости она может быть перемещена или удалена.
             this.statusTableAdapter.Fill(this.rentalPointDataSet.status);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "rentalPointDataSet.order". При необходимости она может быть перемещена или удалена.
@@ -61,12 +63,37 @@ namespace RentalPoint
         private void AcountForm_Activated(object sender, EventArgs e)
         {
             dataGridView1.DataSource = RentalPointEntities.GetContext().client.ToList();
+            
         }
 
         private void AddClientForOrder_Click(object sender, EventArgs e)
         {
             AddClientForm addClientForm = new AddClientForm();
-            addClientForm.ShowDialog();
+            addClientForm.Show();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (labelRole.Text != "Администратор")
+            {
+                e.Cancel = e.TabPageIndex == 3;
+            }
+            
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CloseApplication_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

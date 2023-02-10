@@ -32,5 +32,10 @@ namespace RentalPoint
             
             
         }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
