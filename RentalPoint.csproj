@@ -55,25 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcountForm.cs">
+    <Compile Include="Forms\AcountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AcountForm.Designer.cs">
+    <Compile Include="Forms\AcountForm.Designer.cs">
       <DependentUpon>AcountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddClientForm.cs">
+    <Compile Include="Forms\AddClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddClientForm.Designer.cs">
+    <Compile Include="Forms\AddClientForm.Designer.cs">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="client.cs">
       <DependentUpon>pointModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="order.cs">
@@ -120,13 +120,13 @@
       <DependentUpon>pointModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UserService.cs" />
-    <EmbeddedResource Include="AcountForm.resx">
+    <EmbeddedResource Include="Forms\AcountForm.resx">
       <DependentUpon>AcountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddClientForm.resx">
+    <EmbeddedResource Include="Forms\AddClientForm.resx">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
